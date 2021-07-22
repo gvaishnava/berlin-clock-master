@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>validate-input</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+<div class="story">
+<h1>Story: The Berlin Clock Validation</h1>
+<div class="path">file:/C:/Users/Gaurav/Downloads/berlin-clock-master/bin/stories/validate-input.story</div>
+<div class="narrative"><h2>Narrative:</h2>
+<div class="element inOrderTo"><span class="keyword inOrderTo">In order to</span> avoid invalid clock input</div>
+<div class="element asA"><span class="keyword asA">As a</span> Developer</div>
+<div class="element iWantTo"><span class="keyword iWantTo">I want to</span> add validation for berlin clock</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Currect input</h2>
+<div class="step successful">Given a clockinput of the time is <span class="step parameter">13:34:55</span> and the timeformat is <span class="step parameter">HH:MM:SS</span></div>
+<div class="step successful">Then the validation should look like<br/>Validation Succeed</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Unsupported format</h2>
+<div class="step successful">Given a clockinput of the time is <span class="step parameter">13:34:55</span> and the timeformat is <span class="step parameter">HH:MM:SSS</span></div>
+<div class="step successful">Then the validation should look like<br/>Supported format is HH:MM:SS, Please pick System Defined format from Constants.Hours_Minutes_Seconds.</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Time entered in invalid format</h2>
+<div class="step successful">Given a clockinput of the time is <span class="step parameter">13:34:55:88</span> and the timeformat is <span class="step parameter">HH:MM:SS</span></div>
+<div class="step successful">Then the validation should look like<br/>Please enter full time details in HH:MM:SS format</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Hours entered in invalid format</h2>
+<div class="step successful">Given a clockinput of the time is <span class="step parameter">13AM:34:55</span> and the timeformat is <span class="step parameter">HH:MM:SS</span></div>
+<div class="step successful">Then the validation should look like<br/>Please enter hours in integer value range of 0 to 24</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Minutes entered in invalid format</h2>
+<div class="step successful">Given a clockinput of the time is <span class="step parameter">13:Quater:55</span> and the timeformat is <span class="step parameter">HH:MM:SS</span></div>
+<div class="step successful">Then the validation should look like<br/>Please enter minutes in integer value range of 0 to 59</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Seconds entered in invalid format</h2>
+<div class="step successful">Given a clockinput of the time is <span class="step parameter">13:15:55S</span> and the timeformat is <span class="step parameter">HH:MM:SS</span></div>
+<div class="step successful">Then the validation should look like<br/>Please enter seconds in integer value range of 0 to 59</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Invalid value entered for Hours</h2>
+<div class="step successful">Given a clockinput of the time is <span class="step parameter">55:34:55</span> and the timeformat is <span class="step parameter">HH:MM:SS</span></div>
+<div class="step successful">Then the validation should look like<br/>Please enter hours within range of 0 to 24</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Invalid value entered for Minutes</h2>
+<div class="step successful">Given a clockinput of the time is <span class="step parameter">13:-4:55</span> and the timeformat is <span class="step parameter">HH:MM:SS</span></div>
+<div class="step successful">Then the validation should look like<br/>Please enter minutes within range of 0 to 59</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Invalid value entered for Seconds</h2>
+<div class="step successful">Given a clockinput of the time is <span class="step parameter">13:15:1000</span> and the timeformat is <span class="step parameter">HH:MM:SS</span></div>
+<div class="step successful">Then the validation should look like<br/>Please enter seconds within range of 0 to 59</div>
+</div>
+</div>
+
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>
